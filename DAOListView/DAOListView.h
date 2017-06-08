@@ -38,6 +38,14 @@ typedef void (^ListCellConfigBlock) (UITableViewCell *cell, NSInteger index);
  */
 @property (nonatomic, assign) CGFloat listViewWidth;
 /**
+ *  list view 字体 默认 [UIFont systemFontOfSize:15]
+ */
+@property (nonatomic, copy) UIFont *listViewTextFont;
+/**
+ *  list view 文字布局
+ */
+@property (nonatomic, assign) NSTextAlignment listViewTextAlignment;
+/**
  *  默认 NO
  */
 @property (nonatomic, assign) BOOL listViewBounces;

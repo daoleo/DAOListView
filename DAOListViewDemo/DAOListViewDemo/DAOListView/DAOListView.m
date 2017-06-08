@@ -70,6 +70,8 @@ typedef NS_ENUM(NSInteger, TriangleDirection) {
         self.cellConfig = cellConfig;
         self.referFrame = referFrame;
         self.cellHeight = 40;
+        self.listViewTextFont = [UIFont systemFontOfSize:15];
+        self.listViewTextAlignment = NSTextAlignmentLeft;
         if(self.titleArray)
             self.listViewWidth = 100;
         else
@@ -282,6 +284,8 @@ typedef NS_ENUM(NSInteger, TriangleDirection) {
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = self.listViewTriangleColor;
     cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = self.listViewTextFont;
+    cell.textLabel.textAlignment = self.listViewTextAlignment;
     if(self.titleArray.count > indexPath.row)
         cell.textLabel.text = self.titleArray[indexPath.row];
     if(self.cellConfig)
